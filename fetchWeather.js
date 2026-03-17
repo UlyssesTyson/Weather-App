@@ -33,7 +33,7 @@ try{
     data._last_updated_utc = nowUTC
     fs.writeFileSync(WEATHER_FILE, JSON.stringify(data, null, 2))
 
-    const header = 'timestamp,city,temperature,description\n'
+    const header = ['timestamp,city,temperature,description\n']
 
 if (!fs.existsSync(LOG_FILE)) {
     fs.writeFileSync(LOG_FILE, 'timestamp,city,temperature,description\n')

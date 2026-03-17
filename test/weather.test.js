@@ -26,7 +26,7 @@ describe('Weather Data Tests', () => {
         expect(fs.existsSync(CSV_FILE)).toBe(true)
 
         const csvContent = fs.readFileSync(CSV_FILE, 'utf8')
-        const lines = csvContent.trim().split('/n')
+        const lines = csvContent.trim().split('\n')
         const header = lines[0].split(',')
 
         expect(header).toEqual(['timestamp','city','temperature','description'])
