@@ -11,7 +11,7 @@ describe('Weather Data Tests', () => {
     })
     test('weather.json has required keys', () => {
         const raw = fs.readFileSync(WEATHER_JSON, 'utf8')
-        expects(raw.trim().length).toBeGreaterThat(0)
+        expect(raw.trim().length).toBeGreaterThan(0)
 
         const data = JSON.parse(raw)
         expect(data).toHaveProperty('main')
@@ -19,7 +19,7 @@ describe('Weather Data Tests', () => {
         expect(data.weather[0]).toHaveProperty('description')
         expect(data).toHaveProperty('_last_updated_utc')
 
-        expect(new Date(data._last_updated_utc),toISOString()).toBe(data._last_updated_utc)
+        expect(new Date(data._last_updated_utc).toISOString()).toBe(data._last_updated_utc)
     })
 
     test('CSV log exists and has header', () => {
@@ -29,7 +29,7 @@ describe('Weather Data Tests', () => {
         const lines = csvContent.trim().split('/n')
         const header = lines[0].split(',')
 
-        expect(header).toEqual(['timestamp', 'city', 'temperature', 'description'])
+        expect(header).toEqual(['timestamp','city','temperature','description'])
         expect(lines.length).toBeGreaterThan(1)
 
         const firstDataRow = lines[1].split(',')

@@ -34,13 +34,10 @@ try{
     fs.writeFileSync(WEATHER_FILE, JSON.stringify(data, null, 2))
 
     const header = 'timestamp,city,temperature,description\n'
-    if (!fs.existsSync(LOG_FILE)) {
-        fs.writeFileSync(LOG_FILE, header)
-        const firstLine = fs.readFileSync(LOG_FILE, 'utf8').split('\n')[0]
-        if (firstLine !=='timestamp,city,temperature,description') {
-            fs.writeFileSync(LOG_FILE, header + fs.readFileSync(LOG_FILE, 'utf8'))
-        }
-    }
+
+if (!fs.existsSync(LOG_FILE)) {
+    fs.writeFileSync(LOG_FILE, 'timestamp,city,temperature,description\n')
+}
 
     const logEntry = `${nowUTC},${city},${data.main.temp},${data.weather[0].description}\n`
     fs.appendFileSync(LOG_FILE, logEntry)
