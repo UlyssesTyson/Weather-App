@@ -5,32 +5,32 @@
   },
   "weather": [
     {
-      "id": 804,
+      "id": 803,
       "main": "Clouds",
-      "description": "overcast clouds",
-      "icon": "04n"
+      "description": "broken clouds",
+      "icon": "04d"
     }
   ],
   "base": "stations",
   "main": {
-    "temp": 26.67,
-    "feels_like": 29.41,
-    "temp_min": 25.44,
-    "temp_max": 27.13,
+    "temp": 26.52,
+    "feels_like": 26.52,
+    "temp_min": 24.88,
+    "temp_max": 26.99,
     "pressure": 1013,
-    "humidity": 85,
+    "humidity": 87,
     "sea_level": 1013,
     "grnd_level": 1011
   },
   "visibility": 10000,
   "wind": {
-    "speed": 3.6,
+    "speed": 4.63,
     "deg": 200
   },
   "clouds": {
-    "all": 97
+    "all": 70
   },
-  "dt": 1787249700,
+  "dt": 1787256759,
   "sys": {
     "type": 2,
     "id": 20777,
@@ -42,5 +42,5 @@
   "id": 1850144,
   "name": "Tokyo",
   "cod": 200,
-  "_last_updated_utc": "2026-08-20T18:19:28.576Z"
+  "_last_updated_utc": "2026-08-20T20:14:49.836Z"
 }
